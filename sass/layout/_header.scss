@@ -1,0 +1,93 @@
+.header {
+    height: 30rem;
+}
+
+.navigation {
+    display: flex;
+    color: $color-typography;
+    height: 10rem;
+    width: 100vw;
+    padding: 2rem;
+    z-index: 100;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 17% 60%, 15% 85%, 0% 85%);
+    
+    //sticky navigation
+    &.sticky {
+        position: fixed;
+        background-color: rgba($color-navy-blue, .5);
+        backdrop-filter: blur(4px);
+    }
+
+    &__logo {
+        flex: auto;
+        letter-spacing: 10%;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-typography;
+        font-size: 1.2rem;
+        width: 25rem;
+        height: 12rem;
+
+    
+        &--name {
+            padding: 1rem;
+            font-family: 'Tapestry', cursive;
+            width: 20rem;
+            height: 3rem;
+            text-align: center;
+        }
+    
+        &--description {
+            background-color: $color-khaki;
+            padding: 1rem;
+            display: inline-block;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+        }
+    }
+    
+    &__links {
+        flex: auto;
+        display: flex;
+        width: 97rem;
+        height: 4rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        margin-top: 1rem;
+        // column-rule: 1px solid $color-typography;
+    }
+    
+    &__link:link,
+    &__link:visited {
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: $color-typography;
+        transition: all 1s;
+
+        &.navigation--neumorph {
+            text-align: center;
+            width: 5rem;
+            height: 3rem;
+            background-color: $color-neumorph;
+            box-shadow: .6rem .6rem 1rem rgba($color-black, .2),
+            -.6rem -.6rem 1rem rgba($color-white, .8);
+        }
+    }
+
+    &__about {
+        flex: auto;
+    }
+    &__contact {
+        flex: auto;
+    }
+
+    &__explore {
+        flex: auto;
+    }
+
+
+}

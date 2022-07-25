@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Portfolio wwebsite",
+  "source": "index.html",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "parcel",
+    "build": "parcel build index.html --dist-dir dist"
+  },
+  "author": "Oyefule Oluwatayo",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "node-sass": "^7.0.1",
+    "parcel": "^2.6.2"
+  },
+  "keywords": [
+    "Oyefule Oluwatayo",
+    "Portfolio",
+    "Website"
+  ],
+  "license": "ISC"
+}
