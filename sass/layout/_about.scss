@@ -32,6 +32,43 @@
        margin-top: 5rem;
    }
 
+   &-stack {
+    &--header {
+        font-size: 2rem;
+        padding: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        &-primary {
+            margin-bottom: 3rem;
+            letter-spacing: 3px;
+        }
+    }
+
+    &--overview {
+        width: 37rem;
+        height: 10rem;
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &--list {
+        text-transform: uppercase;
+        list-style: none;
+
+        &-item {
+            font-size: 1.2rem;
+            padding: .5rem;
+        }
+    }
+
+    &--icon {
+        margin-left: 1rem;
+        font-size: 1.6rem;
+    }
+}
+
    &--stack {
        &-container {
            display: inline-block;
