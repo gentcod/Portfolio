@@ -84,6 +84,10 @@
         border: 1px solid rgba($color-white, .6);
         box-shadow: -1rem -1rem 1rem rgba($color-white, 1), 1rem 1rem 1rem rgba($color-black, .2);
     }
+
+    @include respond(phone) {
+        width: 100%;
+    }
 }
 
 .links {
@@ -109,10 +113,22 @@
         position: absolute;
         top: 5rem;
         left: 12rem;
+
+        @include respond(phone) {
+            position: relative;
+            width: 100%;
+            margin-top: 0;
+            left: 0;
+            text-align: center;
+        }
     }
 
     &--img {
-        width: 52rem;
+        max-width: 52rem;
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 }
 
@@ -126,9 +142,19 @@
     border-radius: 1rem;
     background-color: $color-cream;
 
+    @include respond(phone) {
+        position: relative;
+        width: 100%;
+        right: 0;
+    }
+
     &__details {
         width: 40rem;
         z-index: 1;
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 
     &__overlay {
@@ -146,6 +172,10 @@
 
         transition: all .8s;
 
+        @include respond(phone) {
+            width: 100%;
+        }
+
         &:hover {
             backdrop-filter: blur(0);
         }
@@ -156,11 +186,17 @@
         width: 42rem;
         height: 25rem;
         margin-top: 5rem;
+
+        @include respond(phone) {
+            width: 100%;
+            height: 36rem;
+            margin-top: 0;
+        }
     }
 
     &__name {
         padding: 1rem;
-        width: 35rem;
+        max-width: 35rem;
         height: 6rem;
         font-size: 2.4rem;
         font-family: 'Lato', sans-serif;
@@ -171,7 +207,7 @@
     &__overview {
         margin-top: 2rem;
         padding: 1rem;
-        width: 42rem;
+        max-width: 42rem;
         height: 8rem;
         font-size: 1.4rem;
         font-family: 'Lato', sans-serif;
@@ -180,7 +216,7 @@
 
     &__btn--container {
         margin-top: 2rem;
-        width: 28rem;
+        max-width: 28rem;
         height: 3rem;
         display: inline-block;
         margin-left: 3rem;
@@ -188,7 +224,7 @@
     }
 
     &__btn {
-        width: 8rem;
+        max-width: 8rem;
         height: 2rem;
         border-radius: 5px;
         text-transform: uppercase;
@@ -212,11 +248,16 @@
 
     &__emoji {
         display: inline-block;
-        width: 30rem;
-        height: 30rem;
+        max-width: 30rem;
+        max-height: 30rem;
         position: absolute;
         right: 2rem;
         top: 2rem;
+
+        @include respond(phone) {
+            max-width: 10rem;
+            max-height: 10rem;
+        }
     }
 }
 
