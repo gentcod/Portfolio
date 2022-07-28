@@ -9,7 +9,7 @@
     width: 100vw;
     padding: 2rem;
     z-index: 100;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 17% 60%, 15% 85%, 0% 85%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 20% 50%, 18% 85%, 0% 85%);
     
     //sticky navigation
     &.sticky {
@@ -57,6 +57,10 @@
         font-weight: 500;
         margin-top: 1rem;
         // column-rule: 1px solid $color-typography;
+
+        @include respond(tab-land) {
+            max-width: 100%;
+        }
     }
     
     &__link:link,

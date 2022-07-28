@@ -2,7 +2,7 @@
    &-heading {
       text-transform: uppercase;
       letter-spacing: 1rem;
-      font-size: 2rem;
+      font-size: 1.6rem;
    }
 
    &-website {
@@ -14,21 +14,36 @@
       }
 
       &-feature {
+         width: 100%;
          position: relative;
    
          &-container {
-            width: 116rem;
-            height: 80rem;
+            max-width: 90rem;
+            height: 65rem;
             text-align: center;
             background-image: linear-gradient($color-navy-blue-2, rgba($color-white, .8));
-            margin: 10rem 0rem 5rem 5rem; //top, right, bottom, left
+            margin: 5rem 0rem 5rem 5rem; //top, right, bottom, left
+            border-radius: 1rem;
 
             transition: all 1s ease;
+
+            @include respond(tab-port) {
+               max-width: 100%;
+               height: 50rem;
+               margin: 5rem 0;
+               padding: 2rem;
+            }
+         }
+
+         &-wrap {
+            @include respond(tab-port) {
+               width: 100%;
+            }
          }
    
          &-img {
-            width: 95rem;
-            height: 50rem;
+            max-width: 75rem;
+            max-height: 40rem;
             border-radius: 1rem;
             margin: 0 auto;
             padding: 5rem;
@@ -36,6 +51,11 @@
             mask-image: linear-gradient($color-navy-blue, $color-white);
 
             transition: all 1s ease;
+
+            @include respond(tab-port) {
+               max-width: 100%;
+               padding: 0;
+            }
 
             &:hover {
                -webkit-mask-image: none;
@@ -46,31 +66,51 @@
    
          &-desc {
             display: inline-block;
-            height: 50rem;
+            height: 35rem;
             width: 60rem;
             background-color: $color-khaki;
             position: absolute;
             bottom: 5rem;
             right: 5rem;
             text-align: center;
+            border-radius: 1rem;
+
+            @include respond(tab-port) {
+               height: 20rem;
+               width: 100%;
+               bottom: 0;
+               right: 0;
+               margin-bottom: 5rem;
+            }
             
             &--text {
                margin-top: 5rem;
                padding: 5rem;
-               font-size: 2rem;
+               font-size: 1.4rem;
                letter-spacing: .5rem;
                word-spacing: 1rem;
+
+               @include respond(tab-port) {
+                  margin-top: 0;
+               }
             }
          }
    
          &-pagination {
             display: inline-block;
             padding: 1rem;
-            margin: 10rem 0 5rem 55rem;
+            margin: 5rem 0 5rem 45rem;
+
+            @include respond(tab-port) {
+               display: block;
+               width: 100%;
+               margin: 0;
+            }
+
             &-nav {
                display: inline-block;
-               height: 1rem;
-               width: 1rem;
+               height: .6rem;
+               width: .6rem;
                background-color: $color-navy-blue-2;
                border-radius: 50%;
    
@@ -90,26 +130,39 @@
 
       &-features {
          display: grid;
-         grid-template-columns: auto auto auto auto;
-         column-gap: 15rem;
+         grid-template-columns: auto auto auto;
+         column-gap: 10rem;
          row-gap: 10rem;
          justify-content: center;
          align-content: center;
          margin-top: 15rem;
          padding: 5rem;
+
+         @include respond(big-deskop) {
+            grid-template-columns: auto auto auto auto;
+         }
+
+         @include respond(tab-land) {
+            grid-template-columns: auto auto;
+         }
+
+         @include respond(phone) {
+            grid-template-columns: auto;
+            column-gap: 0;
+         }
       }
    
-      &container {
-         max-width: 35rem;
-         max-height: 35rem;
+      &-container {
+         max-width: 25rem;
+         max-height: 30rem;
          box-sizing: border-box;
          margin: 0 auto;
       }
    
       &-img {
          display: inline-block;
-         max-width: 35rem;
-         max-height: 35rem;
+         max-width: 25rem;
+         max-height: 30rem;
          object-fit: cover;
       }
    }

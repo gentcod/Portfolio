@@ -1,18 +1,25 @@
 .get-in-touch {
    display: inline-block;
-   width: 90rem;
+   width: 75rem;
    height: 60rem;
    background-color: $color-cream;
    padding: 2rem;
    margin-top: 15rem;
    margin-left: 2rem;
 
+   @include respond(tab-port) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 2rem;
+   }
+
    &-header {
       letter-spacing: .5rem;
       padding: 1rem;
-      font-size: 2rem;
+      font-size: 1.6rem;
+      font-weight: 900;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
    }
 
    &-summary {
@@ -56,6 +63,7 @@
          border-radius: 3px;
          background-color: $color-khaki-2;
          margin-left: 3rem;
+         font-weight: 800;
       }
    }
 
@@ -64,9 +72,9 @@
    }
 
    &-socials {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       padding: 1.5rem;
-      margin-left: 25rem;
+      margin-left: 10rem;
    }
 
    &-link {
@@ -86,14 +94,23 @@
 
 .socials {
    display: inline-block;
-   width: 100rem;
+   width: 80rem;
    height: 40rem;
+   padding: 1rem;
    border-radius: 1rem;
    color: $color-khaki;
    background-color: rgba($color-navy-blue, .7);
    position: absolute;
-   bottom: 5rem;
-   right: 5rem;
+   bottom: 2rem;
+   right: 2rem;
 
    @include glassmorphism;
+
+   @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      position: relative;
+      bottom: 0;
+      right: 0;
+   }
 }
