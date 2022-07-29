@@ -16,6 +16,8 @@ const sectionAbout = document.querySelector('.section__about')
 const sectionContact = document.querySelector('.section__contact')
 const sectionExplore = document.querySelector('.section__explore')
 
+const hireMe = document.querySelector('.intro__btn--learn-more')
+
 
 /////////////////////////////////////////////////
 //To display appropriate greeting at appropraite time

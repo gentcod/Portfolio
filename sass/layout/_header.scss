@@ -4,12 +4,22 @@
 
 .navigation {
     display: flex;
+    justify-content: space-evenly;
     color: $color-typography;
     height: 10rem;
     width: 100vw;
     padding: 2rem;
     z-index: 100;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 20% 50%, 18% 85%, 0% 85%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 28% 50%, 25% 100%, 0% 100%);
+
+    @include respond(tab-port) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 30% 50%, 28% 100%, 0% 100%);
+    }
+    
+    @include respond(phone) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 38% 50%, 35% 100%, 0% 100%);
+    }
+
     
     //sticky navigation
     &.sticky {
@@ -19,24 +29,25 @@
     }
 
     &__logo {
-        flex: auto;
+        flex: 2;
+        align-self: flex-start;
         letter-spacing: 10%;
         text-transform: uppercase;
         text-decoration: none;
         color: $color-typography;
         font-size: 1.2rem;
-        width: 25rem;
+        max-width: 25rem;
         height: 12rem;
-
-    
+        
+        
         &--name {
             padding: 1rem;
             font-family: 'Tapestry', cursive;
-            width: 20rem;
+            max-width: 20rem;
             height: 3rem;
             text-align: center;
         }
-    
+        
         &--description {
             background-color: $color-khaki;
             padding: 1rem;
@@ -49,7 +60,7 @@
     &__links {
         flex: auto;
         display: flex;
-        width: 97rem;
+        max-width: 97rem;
         height: 4rem;
         text-align: center;
         text-transform: uppercase;
@@ -74,7 +85,7 @@
 
         &.navigation--neumorph {
             text-align: center;
-            width: 5rem;
+            max-width: 5rem;
             height: 3rem;
             background-color: $color-neumorph;
             box-shadow: .6rem .6rem 1rem rgba($color-black, .2),

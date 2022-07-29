@@ -5,6 +5,10 @@
         max-width: 100%;
         padding: 0 5rem;
         margin-bottom: 2rem;
+
+        @include respond(tab-port) {
+            height: fit-content;
+        }
     }
 
     &__about {
@@ -51,6 +55,7 @@
         letter-spacing: 3px;
         text-align: center;
         margin-left: 10rem;
+        margin-bottom: 5rem;
         transform: translateY(3rem);
         
         //Container
@@ -61,6 +66,11 @@
         background-color: $color-khaki;
         box-shadow: .6rem .6rem 1rem rgba($color-black, .2),
         -.6rem -.6rem 1rem rgba($color-white, .8);
+
+        @include respond(tab-port) {
+            max-width: 100%;
+            margin-left: 0;
+        }
     }
 }
 
@@ -85,7 +95,7 @@
         box-shadow: -1rem -1rem 1rem rgba($color-white, 1), 1rem 1rem 1rem rgba($color-black, .2);
     }
 
-    @include respond(phone) {
+    @include respond(tab-port) {
         width: 100%;
     }
 }
@@ -114,19 +124,21 @@
         top: 5rem;
         left: 12rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             position: relative;
             width: 100%;
             margin-top: 0;
             left: 0;
             text-align: center;
+            display: block;
+            margin-bottom: 8rem;
         }
     }
 
     &--img {
         max-width: 52rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 100%;
         }
     }
@@ -142,17 +154,16 @@
     border-radius: 1rem;
     background-color: $color-cream;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
         position: relative;
         width: 100%;
-        right: 0;
     }
 
     &__details {
         width: 40rem;
         z-index: 1;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 100%;
         }
     }
@@ -172,12 +183,15 @@
 
         transition: all .8s;
 
-        @include respond(phone) {
-            width: 100%;
+        @include respond(tab-port) {
+            // width: 100%;
+            // position: relative;
+            display: none;
         }
 
         &:hover {
             backdrop-filter: blur(0);
+            display: none;
         }
     }
 
@@ -187,7 +201,7 @@
         height: 25rem;
         margin-top: 5rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 100%;
             height: 36rem;
             margin-top: 0;
@@ -221,6 +235,13 @@
         display: inline-block;
         margin-left: 3rem;
         position: relative;
+
+        @include respond(tab-port) {
+            display: block;
+            max-width: 100%;
+            margin-left: 0;
+            text-align: center;
+        }
     }
 
     &__btn {
@@ -244,6 +265,10 @@
             margin-left: 5rem;
             background-color: $color-khaki;
         }
+
+        &:hover {
+            transform: translateY(-.5rem) scale(1.1);
+        }
     }
 
     &__emoji {
@@ -258,6 +283,12 @@
             max-width: 10rem;
             max-height: 10rem;
         }
+        
+        @include respond(tab-port) {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
+
     }
 }
 
