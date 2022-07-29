@@ -127,15 +127,12 @@ LearnMore.addEventListener('click', () => {
 })
 
 overlay.addEventListener('mouseover', function() {
-  // console.log(this)
-  // this.style.display = 'none';
   this.classList.add('hidden')
 });
 
 overlay.addEventListener('mouseout', function() {
   setTimeout(()=> {
     overlay.classList.remove('hidden');
-    // console.log('Overlay')
   }, TIME_SEC * 1000)
 })
 
@@ -148,19 +145,18 @@ getIntouch.addEventListener('submit', function(e) {
 
   const formEmail = document.querySelector('.form-email').value;
   const formName = document.querySelector('.form-name').value;
-  const forMsg = document.querySelector('.form-msg').value;
+  const formMsg = document.querySelector('.form-msg').value;
+  const message = `Hello I'm ${formName}, ${formMsg}, contact me using ${formEmail}`
 
-  console.log(formEmail, formName, forMsg);
-
-  console.log(window.location)
+  window.open(`mailto:drelanorgent@gmail.com?subject=${mailSubject}&body=${message}`)
 })
 
 const sliderBtnLeft = document.querySelector('.slider-btn--left');
 const sliderBtnRight = document.querySelector('.slider-btn--right');
 
+//Explore section Slider
 const slider = function() {
 
-  // const slider = document.querySelector('.slider');
   const slides = document.querySelectorAll('.explore-website-feature-wrap');
   const slideText = document.querySelectorAll('.explore-website-feature-desc--text');
   const pagination = document.querySelector('.explore-website-feature-pagination');
@@ -171,7 +167,7 @@ const slider = function() {
   //Create dots for slider
   const createDots = function() {
     slides.forEach(function(_, i) {
-      pagination.insertAdjacentHTML('afterBegin', `<button class="explore-website-feature-pagination-nav" data-slide='${i}'></button>`)
+      pagination.insertAdjacentHTML('afterEnd', `<button class="explore-website-feature-pagination-nav" data-slide='${i}'></button>`)
     })
   }
 
