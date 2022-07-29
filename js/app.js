@@ -67,8 +67,17 @@ const navHeight = navigation.getBoundingClientRect().height
 
 const stickyNav = function(entries) {
   const [entry] = entries //To get the first entry
-  if(!entry.isIntersecting) navigation.classList.add('sticky')
-  else navigation.classList.remove('sticky')
+  if(!entry.isIntersecting) {
+    navigation.classList.add('sticky')
+      navLink.forEach(function(nav) {
+      nav.classList.add('navigation--neumorph')
+    })
+
+  }
+  else {
+    navigation.classList.remove('sticky')
+    nav.classList.remove('navigation--neumorph')
+  }
 }
 
 const headerObserver = new IntersectionObserver(stickyNav, {
@@ -77,39 +86,6 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight - 40}px` //distance away from target
 })
 headerObserver.observe(sectionTop)
-
-//Navigation select
-// const navSelect = function(entries, observer) {
-//   const [entry] = entries
-//   // console.log(entry.target.classList)
-
-
-  
-//   if (entry.target.classList.contains('section__about') && entry.isIntersecting) navAbout.classList.add('navigation--neumorph')
-//   else navAbout.classList.remove('section--neumorph')
-
-//   // if (entry.target.classList.contains('section__contact') && entry.isIntersecting) navContact.classList.add('navigation--neumorph')
-//   // else navContact.classList.remove('section--neumorph')
-
-//   // if (entry.target.classList.contains('section__explore') && entry.isIntersecting) navExplore.classList.add('navigation--neumorph')
-//   // else navExplore.classList.remove('section--neumorph')
-// }
-
-// const navLinkObserver = new IntersectionObserver(navSelect, {
-//   root: null,
-//   threshold: 0.5,
-// })
-
-// sections.forEach(function(section) {
-//   navLinkObserver.observe(section)
-// })
-
-navLink.forEach(function(nav) {
-  nav.classList.remove('navigation--neumorph')
-})
-
-// navLinkObserver.observe(sectionContact)
-// navLinkObserver.observe(sectionExplore)
 
 ////////////////////////////////
 //Hire me mail
@@ -167,7 +143,7 @@ const slider = function() {
   //Create dots for slider
   const createDots = function() {
     slides.forEach(function(_, i) {
-      pagination.insertAdjacentHTML('afterEnd', `<button class="explore-website-feature-pagination-nav" data-slide='${i}'></button>`)
+      pagination.insertAdjacentHTML('beforeend', `<button class="explore-website-feature-pagination-nav" data-slide='${i}'></button>`)
     })
   }
 
@@ -233,3 +209,36 @@ const slider = function() {
 }
 
 slider()
+
+
+// // Navigation select
+// const navSelect = function(entries, observer) {
+//   const [entry] = entries
+//   console.log(entry.target.classList)
+//   console.log(!entry.target.classList.contains('section__about'))
+//   console.log(entry.isIntersecting)
+//   console.log(entry)
+  
+//   if (!entry.isIntersecting) navAbout.classList.remove('navigation--neumorph')
+//   else navAbout.classList.add('navigation--neumorph')
+
+
+
+//   // if (entry.target.classList.contains('section__contact') && entry.isIntersecting) navContact.classList.add('navigation--neumorph')
+//   // else navContact.classList.remove('section--neumorph')
+
+//   // if (entry.target.classList.contains('section__explore') && entry.isIntersecting) navExplore.classList.add('navigation--neumorph')
+//   // else navExplore.classList.remove('section--neumorph')
+// }
+
+// const navLinkObserver = new IntersectionObserver(navSelect, {
+//   root: null,
+//   threshold: 0.5,
+// })
+
+// navLinkObserver.observe(sectionAbout)
+// // sections.forEach(function(section) {
+// // })
+
+// // navLinkObserver.observe(sectionContact)
+// // navLinkObserver.observe(sectionExplore)
