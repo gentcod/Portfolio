@@ -16,26 +16,32 @@
       &-feature {
          width: 100%;
          position: relative;
+         text-align: center;
    
          &-container {
             max-width: 90rem;
             height: 65rem;
             text-align: center;
             background-image: linear-gradient($color-navy-blue-2, rgba($color-white, .8));
-            margin: 5rem 0rem 5rem 5rem; //top, right, bottom, left
+            margin: 0 auto; //top, right, bottom, left
             border-radius: 1rem;
+            position: relative;
+
+            overflow: hidden;
 
             transition: all 1s ease;
 
             @include respond(tab-port) {
                max-width: 100%;
-               height: 50rem;
-               margin: 5rem 0;
-               padding: 2rem;
             }
          }
 
          &-wrap {
+            width: 100%;
+            position: absolute;
+
+            transition: all 1s;
+
             @include respond(tab-port) {
                width: 100%;
             }
@@ -55,6 +61,7 @@
             @include respond(tab-port) {
                max-width: 100%;
                padding: 0;
+               margin-top: 2rem;
             }
 
             &:hover {
@@ -66,32 +73,64 @@
    
          &-desc {
             display: inline-block;
-            height: 35rem;
-            width: 60rem;
+            height: 10rem;
+            width: 95%;
             background-color: $color-khaki;
             position: absolute;
-            bottom: 5rem;
-            right: 5rem;
+            bottom: 0;
+            left: 0;
             text-align: center;
             border-radius: 1rem;
+            margin-left: 2rem;
 
+            transform: translateY(15rem);
             @include respond(tab-port) {
-               height: 20rem;
                width: 100%;
-               bottom: 0;
-               right: 0;
-               margin-bottom: 5rem;
+               margin-left: 0;
+            }
+
+            &-container {
+               width: 100%;
+               position: relative;
+
             }
             
             &--text {
-               margin-top: 5rem;
-               padding: 5rem;
-               font-size: 1.4rem;
+               font-size: 1.2rem;
+               padding: 1rem;
                letter-spacing: .5rem;
                word-spacing: 1rem;
+               position: absolute;
 
                @include respond(tab-port) {
                   margin-top: 0;
+               }
+            }
+         }
+
+         &-btn {
+            font-size: 5rem;
+            display: inline-block;
+            position: absolute;
+            top: 40%;
+            border: 0;
+            background-color: transparent;
+            outline: none;
+            color: $color-khaki-2;
+
+            &--right {
+               right: 15rem;
+
+               @include respond(tab-port) {
+                  right: 10rem;
+               }
+            }
+
+            &--left {
+               left: 15rem;
+
+               @include respond(tab-port) {
+                  left: 10rem;
                }
             }
          }
@@ -99,7 +138,9 @@
          &-pagination {
             display: inline-block;
             padding: 1rem;
-            margin: 5rem 0 5rem 45rem;
+            margin: 0 auto;
+            margin-top: 2rem;
+            
 
             @include respond(tab-port) {
                display: block;
@@ -113,6 +154,8 @@
                width: .6rem;
                background-color: $color-navy-blue-2;
                border-radius: 50%;
+               border: 0;
+               outline: none;
    
                &:not(:last-child) {
                   margin-right: 1rem;

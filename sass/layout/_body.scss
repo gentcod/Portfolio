@@ -8,6 +8,7 @@
 
         @include respond(tab-port) {
             height: fit-content;
+            padding: 1rem;
         }
     }
 
@@ -19,12 +20,17 @@
         background-color: $color-background-2;
         padding: 5rem;
 
+        @include respond(tab-port) {
+            padding: 2rem;
+        }
+
         &-content {
             display: grid;
             grid-template-columns: auto auto;
             justify-content: space-around;
             align-content: center;
             margin-bottom: 5rem;
+            max-width: 100%;
 
             @include respond(tab-land) {
                 grid-template-columns: auto;
@@ -157,14 +163,16 @@
     @include respond(tab-port) {
         position: relative;
         width: 100%;
+        right: 0;
+        padding: 0;
     }
 
     &__details {
-        width: 40rem;
+        max-width: 40rem;
         z-index: 1;
 
         @include respond(tab-port) {
-            width: 100%;
+            max-width: 70%;
         }
     }
 
@@ -191,7 +199,6 @@
 
         &:hover {
             backdrop-filter: blur(0);
-            display: none;
         }
     }
 
@@ -255,6 +262,7 @@
         display: inline-block;
         padding: .5rem;
         text-align: center;
+        cursor: pointer;
 
 
         &--hire-me {
@@ -279,15 +287,16 @@
         right: 2rem;
         top: 2rem;
 
+        @include respond(tab-port) {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
+
         @include respond(phone) {
             max-width: 10rem;
             max-height: 10rem;
         }
         
-        @include respond(tab-port) {
-            max-width: 15rem;
-            max-height: 15rem;
-        }
 
     }
 }
@@ -300,4 +309,9 @@
     color: $color-typography;
     margin-top: 2rem;
     letter-spacing: .5rem;
+}
+
+.hidden {
+    display: none;
+    z-index: 0;
 }
