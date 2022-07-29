@@ -123,7 +123,7 @@ hireMe.addEventListener('click', () => [
 ])
 
 LearnMore.addEventListener('click', () => {
-  window.open(`./doc/Oyefule_Oluwatayo_Resume.pdf`)
+  window.open(`https://docs.google.com/document/d/e/2PACX-1vRHpypIpHmtHunuuvmPhv1ovLyWvkkL7ROxBRbo2e-PAFVzsejsm9nlcD4R5aTjlQ/pub`)
 })
 
 overlay.addEventListener('mouseover', function() {

@@ -118,11 +118,21 @@
             outline: none;
             color: $color-khaki-2;
 
+            
+            @include respond(phone) {
+               top: 50%;
+            }
+
             &--right {
                right: 15rem;
 
                @include respond(tab-port) {
                   right: 10rem;
+               }
+
+               
+               @include respond(phone) {
+                  right: 5rem;
                }
             }
 
@@ -131,6 +141,11 @@
 
                @include respond(tab-port) {
                   left: 10rem;
+               }
+
+               
+               @include respond(phone) {
+                  left: 5rem;
                }
             }
          }
