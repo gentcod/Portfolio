@@ -1,1 +1,1 @@
-export const TIME_SEC = 10;
+export const TIME_SEC = 5;

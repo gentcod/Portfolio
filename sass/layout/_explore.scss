@@ -11,6 +11,11 @@
       &-heading {
          font-family: 'Edu VIC WA NT Beginner', cursive;
          letter-spacing: .5rem;
+
+         & a {
+            text-decoration: none;
+            color: $color-typography;
+         }
       }
 
       &-feature {
