@@ -70,13 +70,15 @@ const stickyNav = function(entries) {
   if(!entry.isIntersecting) {
     navigation.classList.add('sticky')
       navLink.forEach(function(nav) {
-      nav.classList.add('navigation--neumorph')
+        nav.style.color = '#fff';
+      // nav.classList.add('navigation--neumorph')
+      document.querySelector('.navigation__logo--name').style.color = '#fff';
     })
 
   }
   else {
     navigation.classList.remove('sticky')
-    nav.classList.remove('navigation--neumorph')
+    // nav.classList.remove('navigation--neumorph')
   }
 }
 

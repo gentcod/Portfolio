@@ -5,7 +5,6 @@
 .navigation {
     display: flex;
     justify-content: space-evenly;
-    color: $color-typography;
     height: 10rem;
     width: 100vw;
     padding: 2rem;
@@ -35,7 +34,7 @@
         letter-spacing: 10%;
         text-transform: uppercase;
         text-decoration: none;
-        color: $color-typography;
+        color: $color-white;
         font-size: 1.2rem;
         max-width: 25rem;
         height: 12rem;
@@ -55,6 +54,7 @@
         
         &--description {
             background-color: $color-khaki;
+            color: $color-typography;
             padding: 1rem;
             display: inline-block;
             font-family: 'Lato', sans-serif;
@@ -85,12 +85,13 @@
     }
     
     &__link:link,
-    &__link:visited {
+    &__link:visited,
+    &__link:active {
         font-weight: 700;
         font-family: 'Lato', sans-serif;
         letter-spacing: 2px;
         text-decoration: none;
-        color: $color-typography;
+        color: $color-white;
         transition: all 1s;
 
         &.navigation--neumorph {

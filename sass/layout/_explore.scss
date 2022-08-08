@@ -3,6 +3,7 @@
       text-transform: uppercase;
       letter-spacing: 1rem;
       font-size: 1.6rem;
+      color: $color-khaki;
    }
 
    &-website {
@@ -80,7 +81,8 @@
             display: inline-block;
             height: 10rem;
             width: 95%;
-            background-color: $color-khaki;
+            background-color: $color-plum;
+            color: $color-khaki;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -121,7 +123,7 @@
             border: 0;
             background-color: transparent;
             outline: none;
-            color: $color-khaki-2;
+            color: $color-khaki;
 
             
             @include respond(phone) {
@@ -198,7 +200,7 @@
          row-gap: 10rem;
          justify-content: center;
          align-content: center;
-         margin-top: 15rem;
+         margin-top: 10rem;
          padding: 5rem;
 
          @include respond(big-deskop) {
@@ -220,6 +222,12 @@
          max-height: 30rem;
          box-sizing: border-box;
          margin: 0 auto;
+         cursor: pointer;
+         
+         &:hover {
+            animation: shake 1s ease-in;
+            animation-fill-mode: backwards;
+         }
       }
    
       &-img {
