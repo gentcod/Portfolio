@@ -6,9 +6,8 @@
         padding: 0 5rem;
         margin-bottom: 2rem;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             height: fit-content;
-            padding: 1rem;
         }
     }
 
@@ -20,21 +19,15 @@
         background-color: $color-background-2;
         padding: 5rem;
 
-        @include respond(tab-port) {
-            padding: 0;
-        }
-
         &-content {
             display: grid;
             grid-template-columns: auto auto;
             justify-content: space-around;
             align-content: center;
             margin-bottom: 5rem;
-            width: 100%;
 
             @include respond(tab-land) {
                 grid-template-columns: auto;
-                justify-content: center;
             }
         }
     }
@@ -95,14 +88,14 @@
     text-transform: uppercase;
     letter-spacing: 10%;
 
-    box-shadow: -.6rem -.6rem 1rem rgba($color-white, .6), .6rem .6rem 1rem rgba($color-black, .2);
+    box-shadow: -.6rem -.6rem 1rem rgba($color-white, 1), .6rem .6rem 1rem rgba($color-black, .2);
 
     &:hover {
         border: 1px solid rgba($color-white, .6);
         box-shadow: -1rem -1rem 1rem rgba($color-white, 1), 1rem 1rem 1rem rgba($color-black, .2);
     }
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         width: 100%;
     }
 }
@@ -131,7 +124,7 @@
         top: 5rem;
         left: 12rem;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             position: relative;
             width: 100%;
             margin-top: 0;
@@ -145,7 +138,7 @@
     &--img {
         max-width: 52rem;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             width: 100%;
         }
     }
@@ -161,19 +154,17 @@
     border-radius: 1rem;
     background-color: $color-cream;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         position: relative;
         width: 100%;
-        right: 0;
-        padding: 0;
     }
 
     &__details {
-        max-width: 40rem;
+        width: 40rem;
         z-index: 1;
 
-        @include respond(tab-land) {
-            max-width: 70%;
+        @include respond(tab-port) {
+            width: 100%;
         }
     }
 
@@ -192,7 +183,7 @@
 
         transition: all .8s;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             // width: 100%;
             // position: relative;
             display: none;
@@ -200,6 +191,7 @@
 
         &:hover {
             backdrop-filter: blur(0);
+            display: none;
         }
     }
 
@@ -263,7 +255,6 @@
         display: inline-block;
         padding: .5rem;
         text-align: center;
-        cursor: pointer;
 
 
         &--hire-me {
@@ -288,16 +279,15 @@
         right: 2rem;
         top: 2rem;
 
-        @include respond(tab-port) {
-            max-width: 15rem;
-            max-height: 15rem;
-        }
-
         @include respond(phone) {
             max-width: 10rem;
             max-height: 10rem;
         }
         
+        @include respond(tab-port) {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
 
     }
 }
@@ -310,37 +300,4 @@
     color: $color-typography;
     margin-top: 2rem;
     letter-spacing: .5rem;
-}
-
-.hidden {
-    display: none;
-    z-index: 0;
-}
-
-.footer {
-    background-color: $color-black;
-    color: $color-white;
-    height: 10rem;
-    width: 100%;
-    padding: 5rem 2rem;
-    font-family: $font-lato;
-    font-size: 1.2rem;
-    text-align: center;
-
-    &__link {
-
-        &:link,
-        &:active,
-        &:visited {
-            text-decoration: none;
-            color: $color-khaki;
-            text-transform: uppercase;
-            margin-left: 1rem;
-            font-weight: 700;
-        }
-    }
-    
-    &__copyright {
-        margin-left: 5rem;
-    }
 }
