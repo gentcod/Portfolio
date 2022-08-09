@@ -7,12 +7,12 @@
         <meta name='description' content="Portfolio website for Oyefule Oluwatayo, Web Developer with competencies in CSS, Sass, Javascript and Python">
         <meta author="Oyefule Oluwatayo">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="./css/style.css"> -->
-        <link rel="stylesheet" href="./sass/main.scss">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- <link rel="stylesheet" href="./sass/main.scss"> -->
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tapestry&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="/js/app.js" defer></script>
+        <script type="module" src="/js/app.js"></script>
         <title>Oyefule Oluwatayo Portfolio</title>
     </head>
     <body>
@@ -34,7 +34,7 @@
                 <div class="greeting">Hello, Good day</div>
     
                 <div class="links">
-                    <a href="#" class="links__icon">
+                    <a href="#" class="links__icon email">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
                     <a href="https://www.lindkedin.com/in/oyefule-oluwtayo" class="links__icon">
@@ -79,7 +79,7 @@
                         <div class="about__me--text-block">
                             <h3 class="secondary-header">About Me</h3>
                             <p class="about__me--description">I'm a creative and developer with Nigerian roots. I have an experience studying Architecture at Yaba College of education, Lagos State, Nigeria. I later went on to study Software Engineering at the Federal University of Technology, Akure. &nbsp; 
-                                safe to say I've been designing for most part of my life
+                                Safe to say I've been designing for most part of my life. I believe in taking risks and taking chances but I believe in competence and I adopt using competence as a leverage to build trust
                             </p>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                                     <li class="about__me-stack--list-item">Sass</li>
                                     <li class="about__me-stack--list-item">Javascript</li>
                                     <li class="about__me-stack--list-item">React</li>
-                                    <li class="about__me-stack--list-item">Node Js</li>
+                                    <!-- <li class="about__me-stack--list-item">Node Js</li> -->
                                 </ul>
                             </div>
     
@@ -156,16 +156,17 @@
                     <form action="POST" class="get-in-touch-form">
                         <div class="get-in-touch-form--data">
                             <label for="email" class="get-in-touch-form--data-label">Email</label>
-                            <input type="email" class="get-in-touch-form--data-input" id="email">
+                            <input type="email" class="get-in-touch-form--data-input form-email" id="email" required>
                         </div>
                         <div class="get-in-touch-form--data">
                             <label for="name" class="get-in-touch-form--data-label">Name</label>
-                            <input type="email" class="get-in-touch-form--data-input" id="name">
+                            <input type="text" class="get-in-touch-form--data-input form-name" id="name" required>
                         </div><div class="get-in-touch-form--data">
                             <label for="message" class="get-in-touch-form--data-label">Message</label>
-                            <input type="email" class="get-in-touch-form--data-input" id="message">
+                            <input type="text" class="get-in-touch-form--data-input form-msg" id="message" required>
                         </div>
 
+                        <!-- <input type="button" class="get-in-touch-form-btn" value="SUBMIT"> -->
                         <button class="get-in-touch-form-btn">SUBMIT</button>
                     </form>
                 </div>
@@ -203,7 +204,7 @@
                             </a>
                         </li>
                         <li class="get-in-touch-socials">
-                            <a href="#mail" class="get-in-touch-link">
+                            <a href="#mail" class="get-in-touch-link email">
                                 <i class="fa-solid fa-envelope get-in-touch-icon"></i>
                                 drelanorgent@gmail.com
                             </a>
@@ -219,30 +220,58 @@
                 <div class="explore-website">
                     <h3 class="explore-heading margin-big">Web design</h3>
                     <div class="explore-website-feature">
-                        <div class="explore-website-feature-container">
-                            <div class="explore-website-feature-wrap active">
+                        <div class="explore-website-feature-container slider">
+                            <div class="explore-website-feature-wrap">
                                 <img src="./img/forkify_project.png" alt="Forkify Recipe Website" class="explore-website-feature-img">
-                                <h3 class="explore-heading explore-website-heading">Forkify Recipe Website</h3>
+                                <h3 class="explore-heading explore-website-heading"><a href="https://www.gentcod-forkify.netlify.app" target="_blank">Forkify Recipe Website</a></h3>
+
+                                <div class="explore-website-feature-desc">
+                                    <div class="explore-website-feature-desc-container">
+                                        <p class="explore-website-feature-desc--text">A recipe website with a repository of recipes with details on ingredients per servings and external link to sources for more reference. A website designed from an online course as reference.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="explore-website-feature-wrap hidden">
+                            <div class="explore-website-feature-wrap">
                                 <img src="./img/movie_site.png" alt="Streaming Website" class="explore-website-feature-img">
-                                <h3 class="explore-heading explore-website-heading">Movie streaming Website</h3>
+                                <h3 class="explore-heading explore-website-heading"><a href="https://www.gentcod-movie.netlify.app" target="_blank">Movie streaming Website</a></h3>
+
+                                <div class="explore-website-feature-desc">
+                                    <div class="explore-website-feature-desc-container">
+                                        <p class="explore-website-feature-desc--text">Landing page for a movie streaming website. The design was pciked up from an online course but few changes and features were added to give the User Interface a better feel and interaction.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="explore-website-feature-wrap hidden">
+                            <div class="explore-website-feature-wrap">
                                 <img src="./img/foodie.png" alt="Foodie Recipe Website" class="explore-website-feature-img">
-                                <h3 class="explore-heading explore-website-heading">Foodie Recipe Website</h3>
+                                <h3 class="explore-heading explore-website-heading"><a href="https://www.gentcod-foodie.netlify.app" target="_blank">Foodie Recipe Website</a></h3>
+
+                                <div class="explore-website-feature-desc">
+                                    <div class="explore-website-feature-desc-container">
+                                        <p class="explore-website-feature-desc--text">A prototype recipe website of Food.com. Built with responsive User Interface on multiple devices. This happened to be my first design project, I have made changes over time.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="explore-website-feature-wrap">
+                                <img src="./img/natours.png" alt="Foodie Recipe Website" class="explore-website-feature-img">
+                                <h3 class="explore-heading explore-website-heading"><a href="https://www.gentcod-natours.netlify.app" target="_blank">Natours</a></h3>
+
+                                <div class="explore-website-feature-desc">
+                                    <div class="explore-website-feature-desc-container">
+                                        <p class="explore-website-feature-desc--text">A prototype of Natours. A holiday or vacation tour preview website with nice interface design and interractions. Designed from an online course by Jonas Schedtmann</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="explore-website-feature-desc">
-                            <p class="explore-website-feature-desc--text active">A recipe website with a repository of recipes with details on ingredients per servings and external link to sources for more reference. A website designed from an online course as reference.</p>
-                            <p class="explore-website-feature-desc--text hidden"></p>
-                            <p class="explore-website-feature-desc--text hidden"></p>
-                        </div>
+
                         <div class="explore-website-feature-pagination">
-                            <div class="explore-website-feature-pagination-nav"></div>
+                            <!-- <div class="explore-website-feature-pagination-nav"></div>
                             <div class="explore-website-feature-pagination-nav explore-website-feature-pagination-nav-active"></div>
-                            <div class="explore-website-feature-pagination-nav"></div>
+                            <div class="explore-website-feature-pagination-nav"></div> -->
                         </div>
+
+                        <button class="explore-website-feature-btn explore-website-feature-btn--left slider-btn--left"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="explore-website-feature-btn explore-website-feature-btn--right slider-btn--right"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
 
@@ -287,5 +316,6 @@
             </section>
         </main>
         
+        <footer class="footer">Designed by <a href="hhtps://www.linkedin.com/in/oyefule-oluwatayo" class="footer__link"> Oyefule Oluwatayo</a>. <span class="footer__copyright">Copyright by &copy; Oyefule Oluwatayo</span></footer>
     </body>
 </html>
