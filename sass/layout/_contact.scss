@@ -2,7 +2,9 @@
    display: inline-block;
    width: 75rem;
    height: 60rem;
-   background-color: $color-cream;
+   border-radius: .5rem;
+   background-color: $color-background-2;
+   color: $color-white;
    padding: 2rem;
    margin-top: 15rem;
    margin-left: 2rem;
@@ -11,10 +13,6 @@
       width: 100%;
       margin-left: 0;
       margin-bottom: 2rem;
-      display: block;
-   }
-
-   @include respond(tab-port) {
       margin: 0 auto;
    }
 
@@ -30,19 +28,16 @@
    &-summary {
       max-width: 60rem;
       padding: 1rem;
-      margin-left: 5rem;
       margin-bottom: 3rem;
 
-      @include respond(tab-port) {
-         width: 80%;
-         margin-left: 0;
+      @include respond(tab-land) {
+         max-width: 80%;
          text-align: center;
       }
    }
 
    &-form {
       width: 40rem;
-      margin-left: 5rem;
 
       @include respond(tab-port) {
          width: 100%;
@@ -61,18 +56,24 @@
          }
 
          &-input {
-            display: block;
-            width: 30rem;
-            height: 4rem;
+            width: 40rem;
+            height: 3rem;
+            border-radius: 1rem;
             outline: none;
             border: none;
             margin-top: 1rem;
-            background-color: $color-sky-blue;
+            background-color: $color-white;
+            color: $color-typography;
             font-size: 1.6rem;
             padding: 1rem;
 
+            &:focus {
+               border-bottom: 3px solid orangered;
+               box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+            }
+
             @include respond(tab-port) {
-               width: 80%;
+               width: 90%;
             }
          }
       }
@@ -82,9 +83,11 @@
          height: 4rem;
          border: 0;
          border-radius: 3px;
-         background-color: $color-khaki-2;
+         background-color: $color-plum;
+         color: $color-khaki;
          margin-left: 3rem;
          font-weight: 800;
+         margin-bottom: 2rem;
       }
    }
 
@@ -109,7 +112,7 @@
 
    &-icon {
       margin-right: 1.5rem;
-      color: $color-typography;
+      color: $color-khaki;
    }
 }
 
@@ -129,7 +132,6 @@
 
    @include respond(tab-port) {
       width: 100%;
-      display: block;
       position: relative;
       bottom: 0;
       margin-top: 2rem;
