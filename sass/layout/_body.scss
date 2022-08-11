@@ -272,6 +272,11 @@
         &--learn-more {
             margin-left: 5rem;
             background-color: $color-khaki;
+
+            a {
+                text-decoration: none;
+                color: $color-typography;
+            }
         }
 
         &:hover {

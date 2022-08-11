@@ -100,9 +100,9 @@ hireMe.addEventListener('click', () => [
   window.open(`mailto:drelanorgent@gmail.com?subject=${mailSubject}&body=${mailBody}`)
 ])
 
-LearnMore.addEventListener('click', () => {
-  window.open(`https://docs.google.com/document/d/e/2PACX-1vRHpypIpHmtHunuuvmPhv1ovLyWvkkL7ROxBRbo2e-PAFVzsejsm9nlcD4R5aTjlQ/pub`)
-})
+// LearnMore.addEventListener('click', () => {
+//   window.open(``)
+// })
 
 overlay.addEventListener('mouseover', function() {
   this.classList.add('hidden')
