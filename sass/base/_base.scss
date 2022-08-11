@@ -3,7 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
-
+    box-sizing: inherit;
 }
 
 html {
@@ -24,4 +24,9 @@ html {
 
 body {
     box-sizing: border-box;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
 }
