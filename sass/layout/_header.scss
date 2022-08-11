@@ -16,7 +16,7 @@
     }
     
     @include respond(phone) {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 38% 50%, 35% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 40% 50%, 38% 100%, 0% 100%);
         padding: .5rem;
     }
 
