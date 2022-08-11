@@ -129,7 +129,8 @@
 
             
             @include respond(phone) {
-               top: 20%;
+               font-size: 3rem;
+               top: 30%;
                color: $color-typography;
                z-index: 20;
             }
