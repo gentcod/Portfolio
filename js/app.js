@@ -100,7 +100,6 @@ hireMe.addEventListener('click', () => [
   window.open(`mailto:drelanorgent@gmail.com?subject=${mailSubject}&body=${mailBody}`)
 ])
 
-
 overlay.addEventListener('mouseover', function() {
   this.classList.add('hidden')
 });

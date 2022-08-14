@@ -45,12 +45,16 @@
 
       @include respond(tab-port) {
          width: 100%;
-         margin: 0 auto;
+         text-align: center;
       }
 
       &--data {
          width: 100%;
          margin-bottom: 3rem;
+
+         @include respond(tab-port) {
+            text-align: center;
+         }
 
          &-label {
             height: 5rem;
@@ -61,7 +65,7 @@
          }
 
          &-input {
-            width: 40rem;
+            width: 60rem;
             height: 3rem;
             border-radius: 1rem;
             outline: none;
@@ -93,6 +97,10 @@
          margin-left: 3rem;
          font-weight: 800;
          margin-bottom: 2rem;
+
+         @include respond(tab-port) {
+            margin-left: 0;
+         }
       }
    }
 

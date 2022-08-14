@@ -8,4 +8,9 @@ body {
 .margin-big {
    margin-left: 10rem;
    margin-bottom: 5rem;
+
+   @include respond(tab-port) {
+      margin-left: 0;
+      text-align: center;
+   }
 }

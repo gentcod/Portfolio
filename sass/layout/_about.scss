@@ -58,6 +58,8 @@
    }
 
    &--description {
+        font-size: 1.8rem;
+        font-weight: 500;
        width: 30rem;
        height: 100%;
        margin-left: 5rem;
@@ -79,40 +81,40 @@
    }
 
    &-stack {
-    &--header {
-        font-size: 2rem;
-        padding: 2rem;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
+        &--header {
+            font-size: 2rem;
+            padding: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
 
-        &-primary {
-            letter-spacing: 3px;
+            &-primary {
+                letter-spacing: 3px;
+            }
+        }
+
+        &--overview {
+            max-width: 35rem;
+            height: 10rem;
+            font-size: 1.4rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        &--list {
+            text-transform: uppercase;
+            list-style: none;
+
+            &-item {
+                font-size: 1.2rem;
+                padding: .5rem;
+            }
+        }
+
+        &--icon {
+            margin-left: 1rem;
+            font-size: 1.6rem;
         }
     }
-
-    &--overview {
-        max-width: 35rem;
-        height: 10rem;
-        font-size: 1.4rem;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    &--list {
-        text-transform: uppercase;
-        list-style: none;
-
-        &-item {
-            font-size: 1.2rem;
-            padding: .5rem;
-        }
-    }
-
-    &--icon {
-        margin-left: 1rem;
-        font-size: 1.6rem;
-    }
-}
 
    &--stack {
        &-container {
