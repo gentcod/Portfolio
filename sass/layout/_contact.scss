@@ -42,10 +42,12 @@
 
    &-form {
       width: 40rem;
+      margin-left: 5rem;
 
       @include respond(tab-port) {
          width: 100%;
          text-align: center;
+         margin-left: 0;
       }
 
       &--data {
@@ -143,7 +145,7 @@
 
    @include glassmorphism;
 
-   @include respond(tab-port) {
+   @include respond(tab-land) {
       width: 100%;
       position: relative;
       bottom: 0;

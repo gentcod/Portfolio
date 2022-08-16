@@ -1,5 +1,4 @@
 'use scrict'
-
 import { TIME_SEC } from "./config.js";
 
 const welcomeMessage = document.querySelector('.greeting')

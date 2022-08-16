@@ -19,5 +19,8 @@
     "Portfolio",
     "Website"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.9.2"
+  }
 }

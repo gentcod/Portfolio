@@ -21,6 +21,8 @@
         margin-bottom: 10rem;
         background-color: $color-background-2;
         padding: 5rem;
+        border-radius: .5rem;
+
 
         @include respond(tab-port) {
             padding: 2rem;
@@ -64,6 +66,8 @@
         margin-bottom: 20rem;
         background-color: $color-background-2;
         padding: 5rem;
+        border-radius: .5rem;
+
         
         @include respond(tab-port) {
             padding: 5rem 2rem;
@@ -139,6 +143,10 @@
             text-transform: uppercase;
             margin-left: 1rem;
             font-weight: 700;
+
+            &:hover {
+                color: $color-plum;
+            }
         }
     }
     
