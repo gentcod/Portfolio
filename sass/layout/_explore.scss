@@ -10,7 +10,6 @@
       margin-top: 5rem; 
 
       &-heading {
-         font-family: 'Edu VIC WA NT Beginner', cursive;
          letter-spacing: .5rem;
 
          & a {
@@ -18,7 +17,7 @@
             &:active, 
             &:visited {
                text-decoration: none;
-               color: $color-typography;
+               color: $color-khaki;
 
                &:hover {
                   color: $color-khaki;
@@ -33,10 +32,10 @@
          text-align: center;
    
          &-container {
-            max-width: 90rem;
+            max-width: 100rem;
             height: 65rem;
             text-align: center;
-            background-image: linear-gradient($color-navy-blue-2, rgba($color-white, .8));
+            background-image: linear-gradient($color-navy-blue, rgba($color-khaki-2, .8));
             margin: 0 auto; //top, right, bottom, left
             border-radius: 1rem;
             position: relative;
@@ -63,12 +62,12 @@
          }
    
          &-img {
-            max-width: 75rem;
-            max-height: 40rem;
+            max-width: 85rem;
+            max-height: 45rem;
             border-radius: 1rem;
             margin: 0 auto;
             padding: 5rem;
-            -webkit-mask-image: linear-gradient($color-navy-blue, transparent);
+            -webkit-mask-image: linear-gradient($color-glass-red, transparent);
             mask-image: linear-gradient($color-navy-blue, $color-white);
 
             transition: all 1s ease;
