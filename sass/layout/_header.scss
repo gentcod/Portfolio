@@ -68,6 +68,7 @@
     &__links {
         flex: auto;
         display: flex;
+        justify-content: space-between;
         max-width: 97rem;
         height: 4rem;
         text-align: center;
