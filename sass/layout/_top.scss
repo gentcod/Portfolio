@@ -89,6 +89,7 @@
    &__details {
       max-width: 30rem;
       z-index: 1;
+      cursor: pointer;
 
       @include respond(tab-land) {
          max-width: 70%;

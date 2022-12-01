@@ -1,6 +1,6 @@
-import * as model from './model';
+import * as model from './model.js';
 
-import navigationView from './views/navigationView';
+import navigationView from './views/navigationView.js';
 
 const controlNavigation = () => {
    const callback = navigationView.stickyNav;
@@ -8,6 +8,7 @@ const controlNavigation = () => {
    const coord = navigationView._sectionTop;
 
    model.sectionObserver(callback, distance, coord);
+
 };
 
 const init = function() {

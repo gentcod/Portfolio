@@ -121,36 +121,3 @@
     z-index: 0;
 }
 
-.footer {
-    background-color: $color-black;
-    color: $color-white;
-    height: 10rem;
-    width: 100%;
-    padding: 5rem 2rem;
-    font-family: $font-lato;
-    font-size: 1.2rem;
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto;
-
-    &__link {
-
-        &:link,
-        &:active,
-        &:visited {
-            text-decoration: none;
-            color: $color-khaki;
-            text-transform: uppercase;
-            margin-left: 1rem;
-            font-weight: 700;
-
-            &:hover {
-                color: $color-plum;
-            }
-        }
-    }
-    
-    &__copyright {
-        margin-left: 5rem;
-    }
-}

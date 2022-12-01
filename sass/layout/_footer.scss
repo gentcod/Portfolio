@@ -1,0 +1,46 @@
+.footer {
+   background-color: $color-black;
+   color: $color-white;
+   height: fit-content;
+   width: 100%;
+   padding: 5rem 2rem;
+   font-family: $font-lato;
+   font-size: 1.2rem;
+   text-align: center;
+   display: grid;
+   grid-template-columns: auto auto;
+
+   &__link {
+
+       &:link,
+       &:active,
+       &:visited {
+           text-decoration: none;
+           color: $color-khaki;
+           text-transform: uppercase;
+           margin-left: 1rem;
+           font-weight: 700;
+
+           &:hover {
+               color: $color-plum;
+           }
+       }
+   }
+   
+   &__copyright {
+       margin-left: 5rem;
+   }
+
+   &__socials {
+      list-style-type: none;
+      margin: 0 auto;
+      margin-top: 2rem;
+      
+      display: flex;
+      gap: 3rem;
+
+      &-item {
+         font-size: 2.5rem;
+      }
+   }
+}
